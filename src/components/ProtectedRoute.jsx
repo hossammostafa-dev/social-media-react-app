@@ -6,6 +6,7 @@ function ProtectedRoute() {
   const [checkToken, setCheckToken] = useState();
 
   useEffect(() => {
+    localStorage.setItem("currentMode", "light")
     const token = localStorage.getItem("token");
     if (token == null || token === "") {
       setCheckToken(false);
